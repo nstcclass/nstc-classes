@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0b2948">
+<title>शिक्षक पैनल | NSTC Classes</title>
+<link rel="icon" type="image/png" href="images/logo.png">
+<script src="theme.js"></script>
+<style>
+:root{--navy:#0b2948;--green:#12634b;--gold:#f5bd3d;--bg:#f4f7fb;--card:#fff;--ink:#17283d;--muted:#63748a;--line:#e1e9f2;--soft:#f8fafd;--red:#b42318}
+html[data-theme="dark"]{--bg:#0c1624;--card:#14263b;--ink:#e6eef7;--muted:#a3b6ca;--line:#243b57;--soft:#102033;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+header{background:var(--navy);color:#fff;padding:12px 16px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+header strong{font-size:16px}
+header small{display:block;color:#f5c64f;font-size:11px;letter-spacing:1px}
+.hbtns{display:flex;gap:8px}
+.hbtns button{background:#ffffff18;color:#fff;border:1px solid #ffffff55;border-radius:20px;padding:7px 12px;font-size:13px;font-weight:700;cursor:pointer}
+main{max-width:760px;margin:auto;padding:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:14px}
+h2{font-size:17px;margin:0 0 10px}
+label{display:block;font-size:13px;font-weight:700;margin:10px 0 4px;color:var(--muted)}
+input,select,textarea{width:100%;padding:12px;border:1px solid var(--line);border-radius:10px;font-size:16px;background:var(--card);color:var(--ink);font-family:inherit}
+button{font-family:inherit}
+.btn{display:inline-block;border:0;border-radius:10px;padding:11px 16px;font-size:15px;font-weight:700;cursor:pointer;text-decoration:none;background:var(--gold);color:#17243a}
+.btn.green{background:var(--green);color:#fff}
+.btn.ghost{background:var(--soft);color:var(--ink);border:1px solid var(--line)}
+.btn.wa{background:#25d366;color:#08311a}
+.btn.sm{padding:8px 11px;font-size:13px}
+.tiles{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.tile{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 10px;text-align:center;cursor:pointer;font-size:16px}
+.tile b{display:block;font-size:19px;margin:4px 0 2px}
+.tile span{color:var(--muted);font-size:13px}
+.tile .ic{font-size:24px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.dash{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;text-align:center;margin:6px 0 12px}
+.dash div{border-radius:12px;padding:12px 6px;background:var(--soft);border:1px solid var(--line)}
+.dash b{display:block;font-size:30px;line-height:1.1}
+.dash span{font-size:13px;color:var(--muted)}
+.dash .p b{color:#12804f}.dash .a b{color:#b42318}
+.st{border:1px solid var(--line);border-radius:12px;padding:12px;margin-bottom:10px;background:var(--soft)}
+.st-head{display:flex;gap:12px;align-items:center}
+.ph{width:54px;height:54px;border-radius:50%;object-fit:cover;background:#dfe8f2;display:grid;place-items:center;font-weight:800;color:#0b2948;flex:none;font-size:20px}
+.st-head b{font-size:16px;display:block}
+.tag{font-size:12px;background:#e9f4ef;color:#12634b;border-radius:999px;padding:2px 9px;font-weight:700;margin-right:4px;display:inline-block}
+html[data-theme="dark"] .tag{background:#143a30;color:#8fe0c0}
+.st-sub{font-size:13px;color:var(--muted);margin:8px 0;word-break:break-word}
+.pm-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:8px 0}
+.pm{border:2px solid var(--line);background:var(--card);color:var(--ink);border-radius:10px;padding:11px;font-size:15px;font-weight:700;cursor:pointer}
+.pm.on.P{background:#d6f5e3;border-color:#12634b;color:#0b4a38}
+.pm.on.A{background:#fde0dc;border-color:#b42318;color:#7a1a12}
+html[data-theme="dark"] .pm.on.P{background:#143a30;color:#bff2dd}
+html[data-theme="dark"] .pm.on.A{background:#4a1f1b;color:#ffd1cb}
+.stat{font-size:14px;font-weight:700;margin:4px 0 8px}
+.acts{display:flex;flex-wrap:wrap;gap:8px}
+#toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:#111;color:#fff;padding:11px 18px;border-radius:10px;font-size:14px;display:none;z-index:80;max-width:90%}
+.err{color:var(--red);font-size:14px;margin-top:8px;min-height:18px}
+.hide{display:none!important}
+details summary{cursor:pointer;font-weight:700;font-size:16px}
+.note{font-size:13px;color:var(--muted)}
+.modal{position:fixed;inset:0;background:#000a;display:none;align-items:flex-end;justify-content:center;z-index:70}
+.modal.open{display:flex}
+.sheet{background:var(--card);width:100%;max-width:640px;border-radius:18px 18px 0 0;padding:16px;max-height:92vh;overflow:auto}
+.sheet textarea{min-height:250px;line-height:1.6}
+.photo-prev{display:flex;align-items:center;gap:12px;margin-top:6px}
+</style>
+</head>
+<body>
+<header>
+  <div><strong>NO.1 SCIENCE TEACHING CENTRE</strong><small>शिक्षक पैनल · केवल सर लोगों के लिए</small></div>
+  <div class="hbtns"><button id="themeBtn" type="button" aria-label="Dark mode / डार्क मोड">🌙</button><button id="logoutBtn" type="button" class="hide">बाहर निकलें</button></div>
+</header>
+<main>
+
+<section id="loginView" class="card">
+  <h2>शिक्षक लॉगिन</h2>
+  <label for="pw">पासवर्ड</label>
+  <input id="pw" type="password" autocomplete="current-password" placeholder="पासवर्ड लिखिए">
+  <p class="err" id="loginErr"></p>
+  <button id="loginBtn" class="btn green" type="button">अंदर जाएँ</button>
+  <p class="note">यह पन्ना केवल सर लोगों के लिए है। पासवर्ड किसी को न बताएँ।</p>
+</section>
+
+<section id="homeView" class="hide">
+  <div class="card"><h2>कक्षा चुनिए</h2><div class="tiles" id="tiles"></div></div>
+</section>
+
+<section id="classView" class="hide">
+  <div class="card">
+    <div class="acts" style="justify-content:space-between;align-items:center">
+      <button class="btn ghost sm" id="backHome" type="button">← सभी कक्षाएँ</button>
+      <b id="clsTitle"></b>
+    </div>
+    <div class="row2">
+      <div><label for="dateIn">तारीख़</label><input id="dateIn" type="date"></div>
+      <div><label for="batchSel">बैच</label><select id="batchSel"></select></div>
+    </div>
+    <label for="searchIn">खोजें (नाम / रोल / मोबाइल)</label><input id="searchIn" type="search">
+  </div>
+
+  <div class="card">
+    <h2>उपस्थिति</h2>
+    <div class="dash"><div class="p"><b id="nP">0</b><span>Present</span></div><div class="a"><b id="nA">0</b><span>Absent</span></div><div><b id="nT">0</b><span>Total</span></div></div>
+    <div class="acts" style="margin-bottom:12px">
+      <button class="btn ghost sm" id="allP" type="button">सबको Present करें</button>
+      <button class="btn ghost sm" id="clearMarks" type="button">निशान मिटाएँ</button>
+    </div>
+    <div id="list"></div>
+    <button class="btn green" id="saveBtn" type="button" style="width:100%;margin-top:6px">💾 उपस्थिति सहेजें</button>
+    <p class="note" id="saveNote"></p>
+  </div>
+
+  <div class="card">
+    <details id="addBox">
+      <summary id="addTitle">➕ नया विद्यार्थी जोड़ें</summary>
+      <label for="fName">विद्यार्थी का पूरा नाम *</label><input id="fName" type="text" maxlength="60">
+      <div class="row2">
+        <div><label for="fRoll">रोल नंबर (खाली = अपने-आप)</label><input id="fRoll" type="text" inputmode="numeric" maxlength="4"></div>
+        <div><label for="fBoard">बोर्ड</label><select id="fBoard"><option value="">चुनिए</option><option value="BSEB">बिहार बोर्ड (BSEB)</option><option value="CBSE">CBSE</option></select></div>
+      </div>
+      <div class="row2">
+        <div><label for="fBatch">बैच (जैसे सुबह / शाम)</label><input id="fBatch" type="text" maxlength="30"></div>
+        <div><label for="fAdm">एडमिशन की तारीख़</label><input id="fAdm" type="date"></div>
+      </div>
+      <label for="fSPhone">विद्यार्थी का मोबाइल (वैकल्पिक)</label><input id="fSPhone" type="tel" inputmode="numeric" maxlength="14">
+      <label for="fFather">पिता का नाम</label><input id="fFather" type="text" maxlength="60">
+      <label for="fMother">माता का नाम</label><input id="fMother" type="text" maxlength="60">
+      <label for="fGPhone">अभिभावक (Guardian) का मोबाइल *</label><input id="fGPhone" type="tel" inputmode="numeric" maxlength="14" placeholder="10 अंकों का नंबर">
+      <label for="fPhoto">विद्यार्थी की फ़ोटो</label>
+      <input id="fPhoto" type="file" accept="image/*">
+      <div class="photo-prev"><img id="photoPrev" class="ph hide" alt=""><button type="button" class="btn ghost sm hide" id="rmPhoto">फ़ोटो हटाएँ</button></div>
+      <p class="err" id="formErr"></p>
+      <div class="acts">
+        <button class="btn green" id="saveStudent" type="button">जोड़ें</button>
+        <button class="btn ghost hide" id="cancelEdit" type="button">रद्द करें</button>
+      </div>
+      <p class="note">विद्यार्थी केवल सर जोड़ सकते हैं। वह चुनी हुई कक्षा में जुड़ेगा।</p>
+    </details>
+  </div>
+</section>
+</main>
+
+<div class="modal" id="modal">
+  <div class="sheet">
+    <h2>अभिभावक को संदेश</h2>
+    <p class="note" id="modalTo"></p>
+    <textarea id="modalText"></textarea>
+    <p class="note">भेजने से पहले संदेश बदल भी सकते हैं।</p>
+    <div class="acts" style="margin-top:8px">
+      <a class="btn wa" id="modalWa" target="_blank" rel="noopener" href="#">📲 WhatsApp में खोलें</a>
+      <button class="btn ghost" id="modalCopy" type="button">मैसेज कॉपी करें</button>
+      <button class="btn ghost" id="modalClose" type="button">बंद करें</button>
+    </div>
+  </div>
+</div>
+<div id="toast"></div>
+
+<script>
+(function () {
+  var API = 'https://nstc-admin.shivamkumar60657075.workers.dev';
+  var CLASSES = [6, 7, 8, 9, 10, 11, 12];
+  var MONTHS = ['जनवरी', 'फ़रवरी', 'मार्च', 'अप्रैल', 'मई', 'जून', 'जुलाई', 'अगस्त', 'सितंबर', 'अक्टूबर', 'नवंबर', 'दिसंबर'];
+  var S = { cls: '', date: '', batch: '', q: '', students: [], att: {}, marks: {}, editing: null, photo: undefined, attMonth: '' };
+
+  function $(id) { return document.getElementById(id); }
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+  function pad(n) { return (n < 10 ? '0' : '') + n; }
+  function todayStr() { var d = new Date(); return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()); }
+  function clsNum() { return parseInt(S.cls.replace('class-', ''), 10); }
+
+  /*PURE-START*/
+  function monthOf(date) { return date.slice(0, 7); }
+  function dateHindi(date) { return parseInt(date.slice(8, 10), 10) + ' ' + MONTHS[parseInt(date.slice(5, 7), 10) - 1] + ' ' + date.slice(0, 4); }
+  function fmtDate(date) { return date.slice(8, 10) + '/' + date.slice(5, 7) + '/' + date.slice(0, 4); }
+  function stat(id) {
+    var days = {}, k, own = S.att[id] || {};
+    for (k in own) days[k] = own[k];
+    if (S.marks[id]) days[S.date] = S.marks[id];
+    var p = 0, t = 0;
+    for (k in days) { if (k.slice(0, 7) !== monthOf(S.date)) continue; if (days[k] === 'P') { p++; t++; } else if (days[k] === 'A') { t++; } }
+    return { p: p, a: t - p, t: t, pct: t ? Math.round(p * 100 / t) : 0 };
+  }
+  function message(s, isToday) {
+    var st = stat(s.id), mk = S.marks[s.id];
+    var lines = ['नमस्कार अभिभावक जी,', '', 'आपके बच्चे ' + s.name + ' की ' + (isToday ? 'आज की ' : '') + 'उपस्थिति:',
+      'कक्षा: ' + clsNum() + 'वीं', 'तारीख: ' + dateHindi(S.date)];
+    if (mk) lines.push('उपस्थिति: ' + (mk === 'P' ? 'उपस्थित' : 'अनुपस्थित'));
+    lines.push('इस महीने उपस्थित: ' + st.p + ' दिन', 'अनुपस्थित: ' + st.a + ' दिन', 'कुल कार्य दिवस: ' + st.t + ' दिन', '', 'धन्यवाद।', 'NO.1 SCIENCE TEACHING CENTRE');
+    return lines.join('\n');
+  }
+  /*PURE-END*/
+
+  function toast(t) { var m = $('toast'); m.textContent = t; m.style.display = 'block'; clearTimeout(toast.t); toast.t = setTimeout(function () { m.style.display = 'none'; }, 2600); }
+
+  function api(body) {
+    body.token = sessionStorage.getItem('nstc_admin_token') || '';
+    return fetch(API, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) })
+      .then(function (r) { return r.json(); })
+      .then(function (j) {
+        if (j.relogin) { logout(true); throw new Error('relogin'); }
+        if (j.error) throw new Error(j.error);
+        return j;
+      });
+  }
+  function views(v) {
+    ['loginView', 'homeView', 'classView'].forEach(function (id) { $(id).classList.toggle('hide', id !== v); });
+    $('logoutBtn').classList.toggle('hide', v === 'loginView');
+  }
+  function logout(expired) {
+    sessionStorage.removeItem('nstc_admin_token'); S.students = []; S.att = {}; S.marks = {}; views('loginView');
+    $('loginErr').textContent = expired ? 'समय पूरा हो गया। फिर से लॉगिन कीजिए।' : '';
+  }
+  function login() {
+    var pw = $('pw').value;
+    if (!pw) { $('loginErr').textContent = 'पासवर्ड लिखिए।'; return; }
+    $('loginBtn').disabled = true; $('loginErr').textContent = '';
+    fetch(API, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ action: 'login', password: pw }) })
+      .then(function (r) { return r.json(); })
+      .then(function (j) {
+        $('loginBtn').disabled = false;
+        if (j.token) { sessionStorage.setItem('nstc_admin_token', j.token); $('pw').value = ''; home(); }
+        else $('loginErr').textContent = j.error || 'लॉगिन नहीं हो पाया।';
+      })
+      .catch(function () { $('loginBtn').disabled = false; $('loginErr').textContent = 'सर्वर से जुड़ नहीं पाए। इंटरनेट देखिए।'; });
+  }
+
+  // ---- होम: कक्षा के टाइल ----
+  function home() {
+    views('homeView');
+    $('tiles').innerHTML = CLASSES.map(function (n) { return '<div class="tile" data-cls="class-' + n + '"><div class="ic">📖</div><b>Class ' + n + 'th</b><span>Students</span></div>'; }).join('');
+    api({ action: 'counts' }).then(function (j) {
+      $('tiles').innerHTML = CLASSES.map(function (n) { return '<div class="tile" data-cls="class-' + n + '"><div class="ic">📖</div><b>Class ' + n + 'th</b><span>' + (j.counts['class-' + n] || 0) + ' विद्यार्थी</span></div>'; }).join('');
+    }).catch(function () {});
+  }
+
+  // ---- कक्षा का पन्ना ----
+  function openClass(c) {
+    S.cls = c; S.batch = ''; S.q = ''; S.date = S.date || todayStr(); resetForm();
+    views('classView'); $('dateIn').value = S.date; $('searchIn').value = ''; $('clsTitle').textContent = 'कक्षा ' + clsNum();
+    $('list').innerHTML = '<p class="note">खुल रहा है…</p>';
+    Promise.all([api({ action: 'list', cls: S.cls }), api({ action: 'attendance', cls: S.cls, month: monthOf(S.date) })])
+      .then(function (r) { S.students = r[0].students; S.att = r[1].attendance; S.attMonth = monthOf(S.date); initMarks(); renderAll(); })
+      .catch(function (e) { if (e.message !== 'relogin') $('list').innerHTML = '<p class="err">' + esc(e.message) + '</p>'; });
+  }
+  function initMarks() { S.marks = {}; S.students.forEach(function (s) { var v = (S.att[s.id] || {})[S.date]; if (v) S.marks[s.id] = v; }); }
+  function visible() {
+    var q = S.q.trim().toLowerCase();
+    return S.students.filter(function (s) {
+      if (S.batch && s.batch !== S.batch) return false;
+      if (!q) return true;
+      return (s.name + ' ' + (s.rollNo || '') + ' ' + (s.guardianPhone || '') + ' ' + (s.studentPhone || '')).toLowerCase().indexOf(q) > -1;
+    }).sort(function (a, b) { return (a.rollNo || 0) - (b.rollNo || 0) || a.name.localeCompare(b.name, 'hi'); });
+  }
+  function renderBatches() {
+    var set = {}; S.students.forEach(function (s) { if (s.batch) set[s.batch] = 1; });
+    $('batchSel').innerHTML = '<option value="">सभी बैच</option>' + Object.keys(set).sort().map(function (b) { return '<option value="' + esc(b) + '"' + (S.batch === b ? ' selected' : '') + '>' + esc(b) + '</option>'; }).join('');
+  }
+  function renderAll() { renderBatches(); renderList(); }
+
+  function renderList() {
+    var v = visible(), p = 0, a = 0;
+    v.forEach(function (s) { if (S.marks[s.id] === 'P') p++; else if (S.marks[s.id] === 'A') a++; });
+    $('nP').textContent = p; $('nA').textContent = a; $('nT').textContent = v.length;
+    $('clsTitle').textContent = 'कक्षा ' + clsNum() + ' · ' + S.students.length + ' विद्यार्थी';
+    if (!v.length) { $('list').innerHTML = '<p class="note">' + (S.students.length ? 'कोई विद्यार्थी नहीं मिला।' : 'इस कक्षा में अभी कोई विद्यार्थी नहीं है। नीचे से जोड़िए।') + '</p>'; return; }
+    $('list').innerHTML = v.map(function (s) {
+      var st = stat(s.id), mk = S.marks[s.id] || '';
+      var photo = s.photo ? '<img class="ph" alt="" src="' + esc(s.photo) + '">' : '<div class="ph">' + esc(s.name.charAt(0)) + '</div>';
+      var parents = [s.fatherName ? 'पिता: ' + esc(s.fatherName) : '', s.motherName ? 'माता: ' + esc(s.motherName) : ''].filter(Boolean).join(' · ');
+      return '<div class="st" data-id="' + esc(s.id) + '">' +
+        '<div class="st-head">' + photo + '<div><b>' + esc(s.name) + '</b>' +
+        '<span class="tag">रोल ' + esc(s.rollNo || '-') + '</span>' + (s.batch ? '<span class="tag">' + esc(s.batch) + '</span>' : '') + (s.board ? '<span class="tag">' + esc(s.board) + '</span>' : '') + '</div></div>' +
+        '<div class="st-sub">' + (parents ? parents + '<br>' : '') + 'अभिभावक: ' + esc(s.guardianPhone) + (s.studentPhone ? ' · विद्यार्थी: ' + esc(s.studentPhone) : '') + (s.admissionDate ? '<br>एडमिशन: ' + esc(dateHindi(s.admissionDate)) : '') + '</div>' +
+        '<div class="pm-row"><button type="button" class="pm P' + (mk === 'P' ? ' on' : '') + '" data-act="P">✅ Present</button><button type="button" class="pm A' + (mk === 'A' ? ' on' : '') + '" data-act="A">❌ Absent</button></div>' +
+        '<div class="stat">' + esc(MONTHS[parseInt(S.date.slice(5, 7), 10) - 1]) + ': ' + (st.t ? 'उपस्थित ' + st.p + ' · अनुपस्थित ' + st.a + ' · कुल ' + st.t + ' दिन (' + st.pct + '%)' : 'अभी दर्ज नहीं') + '</div>' +
+        '<div class="acts"><button type="button" class="btn wa sm" data-act="msg">📲 अभिभावक को संदेश</button>' +
+        '<button type="button" class="btn ghost sm" data-act="edit">✏️ सुधारें</button><button type="button" class="btn ghost sm" data-act="del">🗑️ हटाएँ</button></div></div>';
+    }).join('');
+  }
+
+  function save() {
+    var marks = {}, n = 0;
+    S.students.forEach(function (s) { if (S.marks[s.id]) { marks[s.id] = S.marks[s.id]; n++; } });
+    if (!n) { toast('पहले Present / Absent चुनिए।'); return; }
+    $('saveBtn').disabled = true;
+    api({ action: 'mark', cls: S.cls, date: S.date, marks: marks })
+      .then(function (j) { $('saveBtn').disabled = false; S.att = j.attendance; toast('सहेज लिया (' + j.saved + ' विद्यार्थी)'); $('saveNote').textContent = 'आख़िरी बार सहेजा: ' + new Date().toLocaleTimeString('hi-IN'); renderList(); })
+      .catch(function (e) { $('saveBtn').disabled = false; if (e.message !== 'relogin') toast(e.message); });
+  }
+
+  // ---- संदेश (पहले दिखेगा, फिर WhatsApp) ----
+  var curMsg = null;
+  function openMsg(s) {
+    curMsg = s;
+    $('modalTo').textContent = s.name + ' के अभिभावक · ' + s.guardianPhone;
+    $('modalText').value = message(s, S.date === todayStr());
+    syncWa(); $('modal').classList.add('open');
+  }
+  function syncWa() { if (curMsg) $('modalWa').href = 'https://wa.me/91' + curMsg.guardianPhone + '?text=' + encodeURIComponent($('modalText').value); }
+  function copyText(t) {
+    if (navigator.clipboard && navigator.clipboard.writeText) return navigator.clipboard.writeText(t);
+    return new Promise(function (res, rej) { var ta = $('modalText'); ta.select(); try { document.execCommand('copy') ? res() : rej(); } catch (e) { rej(e); } });
+  }
+
+  // ---- विद्यार्थी का फ़ॉर्म ----
+  function readPhoto(file) {
+    return new Promise(function (res, rej) {
+      var img = new Image(), url = URL.createObjectURL(file);
+      img.onload = function () {
+        var c = document.createElement('canvas'); c.width = c.height = 120; var ctx = c.getContext('2d'), m = Math.min(img.width, img.height);
+        ctx.drawImage(img, (img.width - m) / 2, (img.height - m) / 2, m, m, 0, 0, 120, 120); URL.revokeObjectURL(url); res(c.toDataURL('image/jpeg', 0.65));
+      };
+      img.onerror = function () { rej(new Error('फ़ोटो पढ़ नहीं पाए।')); }; img.src = url;
+    });
+  }
+  function showPrev(src) { var p = $('photoPrev'); if (src) { p.src = src; p.classList.remove('hide'); $('rmPhoto').classList.remove('hide'); } else { p.classList.add('hide'); $('rmPhoto').classList.add('hide'); } }
+  function resetForm() {
+    ['fName', 'fRoll', 'fBatch', 'fAdm', 'fSPhone', 'fFather', 'fMother', 'fGPhone'].forEach(function (i) { $(i).value = ''; });
+    $('fBoard').value = ''; $('fPhoto').value = ''; S.photo = undefined; S.editing = null; showPrev('');
+    $('formErr').textContent = ''; $('saveStudent').textContent = 'जोड़ें'; $('addTitle').textContent = '➕ नया विद्यार्थी जोड़ें'; $('cancelEdit').classList.add('hide');
+  }
+  function submitStudent() {
+    var body = { action: S.editing ? 'update' : 'add', cls: S.cls, id: S.editing, name: $('fName').value, rollNo: $('fRoll').value, board: $('fBoard').value, batch: $('fBatch').value, admissionDate: $('fAdm').value, studentPhone: $('fSPhone').value, fatherName: $('fFather').value, motherName: $('fMother').value, guardianPhone: $('fGPhone').value };
+    if (S.photo !== undefined) body.photo = S.photo;
+    if (!body.name.trim()) { $('formErr').textContent = 'विद्यार्थी का नाम लिखिए।'; return; }
+    $('saveStudent').disabled = true; $('formErr').textContent = '';
+    api(body).then(function (j) { $('saveStudent').disabled = false; S.students = j.students; resetForm(); renderAll(); toast('हो गया ✔'); })
+      .catch(function (e) { $('saveStudent').disabled = false; if (e.message !== 'relogin') $('formErr').textContent = e.message; });
+  }
+
+  // ---- घटनाएँ ----
+  $('loginBtn').addEventListener('click', login);
+  $('pw').addEventListener('keydown', function (e) { if (e.key === 'Enter') login(); });
+  $('logoutBtn').addEventListener('click', function () { logout(false); });
+  $('tiles').addEventListener('click', function (e) { var t = e.target.closest ? e.target.closest('.tile') : null; if (t) openClass(t.getAttribute('data-cls')); });
+  $('backHome').addEventListener('click', home);
+  $('batchSel').addEventListener('change', function () { S.batch = this.value; renderList(); });
+  $('searchIn').addEventListener('input', function () { S.q = this.value; renderList(); });
+  $('dateIn').addEventListener('change', function () {
+    if (!this.value) return; S.date = this.value;
+    if (monthOf(S.date) !== S.attMonth) {
+      api({ action: 'attendance', cls: S.cls, month: monthOf(S.date) }).then(function (j) { S.att = j.attendance; S.attMonth = monthOf(S.date); initMarks(); renderList(); }).catch(function (e) { if (e.message !== 'relogin') toast(e.message); });
+    } else { initMarks(); renderList(); }
+  });
+  $('allP').addEventListener('click', function () { visible().forEach(function (s) { S.marks[s.id] = 'P'; }); renderList(); });
+  $('clearMarks').addEventListener('click', function () { visible().forEach(function (s) { delete S.marks[s.id]; }); renderList(); });
+  $('saveBtn').addEventListener('click', save);
+  $('saveStudent').addEventListener('click', submitStudent);
+  $('cancelEdit').addEventListener('click', resetForm);
+  $('fPhoto').addEventListener('change', function () { var f = this.files && this.files[0]; if (!f) return; readPhoto(f).then(function (d) { S.photo = d; showPrev(d); }).catch(function (e) { toast(e.message); }); });
+  $('rmPhoto').addEventListener('click', function () { S.photo = ''; $('fPhoto').value = ''; showPrev(''); });
+  $('modalText').addEventListener('input', syncWa);
+  $('modalClose').addEventListener('click', function () { $('modal').classList.remove('open'); });
+  $('modalCopy').addEventListener('click', function () { copyText($('modalText').value).then(function () { toast('मैसेज कॉपी हो गया'); }).catch(function () { toast('कॉपी नहीं हो पाया।'); }); });
+  $('list').addEventListener('click', function (e) {
+    var btn = e.target.closest ? e.target.closest('[data-act]') : null; if (!btn) return;
+    var row = btn.closest('.st'); if (!row) return; var id = row.getAttribute('data-id'), act = btn.getAttribute('data-act');
+    var s = S.students.filter(function (x) { return x.id === id; })[0]; if (!s) return;
+    if (act === 'P' || act === 'A') { if (S.marks[id] === act) delete S.marks[id]; else S.marks[id] = act; renderList(); }
+    else if (act === 'msg') openMsg(s);
+    else if (act === 'del') {
+      if (!confirm(s.name + ' को हटाएँ?')) return;
+      api({ action: 'remove', cls: S.cls, id: id }).then(function (j) { S.students = j.students; delete S.marks[id]; renderAll(); toast('हटा दिया'); }).catch(function (er) { if (er.message !== 'relogin') toast(er.message); });
+    } else if (act === 'edit') {
+      S.editing = id; S.photo = undefined;
+      $('fName').value = s.name; $('fRoll').value = s.rollNo || ''; $('fBoard').value = s.board || ''; $('fBatch').value = s.batch || ''; $('fAdm').value = s.admissionDate || '';
+      $('fSPhone').value = s.studentPhone || ''; $('fFather').value = s.fatherName || ''; $('fMother').value = s.motherName || ''; $('fGPhone').value = s.guardianPhone || ''; showPrev(s.photo || '');
+      $('saveStudent').textContent = 'सुधार सहेजें'; $('addTitle').textContent = '✏️ विद्यार्थी की जानकारी सुधारें'; $('cancelEdit').classList.remove('hide');
+      $('addBox').open = true; $('addBox').scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+
+  if (sessionStorage.getItem('nstc_admin_token')) home(); else views('loginView');
+})();
+</script>
+</body>
+</html>
