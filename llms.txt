@@ -1,0 +1,16 @@
+# NO.1 SCIENCE TEACHING CENTRE (NSTC Classes)
+
+> Coaching centre for school students of classes 6 to 12, for Bihar Board and CBSE, all subjects, with support in Hindi and English medium. Located at Amwa Bairagi Tola, Mother Teresa Public School. The website shares batch timing and fees, notices, free study material PDFs, frequently asked questions and an AI study helper for students.
+
+## Main pages
+- [Home](https://nstcclass.github.io/nstc-classes/): Courses, teachers, batch timing and fees, notice board, admission enquiry and contact.
+- [Study Material](https://nstcclass.github.io/nstc-classes/study-material.html): Class-wise and subject-wise books, notes, model papers and question banks as PDF files.
+- [Books](https://nstcclass.github.io/nstc-classes/books.html): Links to the official free NCERT and Bihar Board textbooks for classes 6 to 12.
+- [FAQ](https://nstcclass.github.io/nstc-classes/faq.html): Answers about admission, classes, boards, fees, batch timing and the AI study helper.
+- [About Us](https://nstcclass.github.io/nstc-classes/about.html): About the centre and its teachers.
+- [Contact Us](https://nstcclass.github.io/nstc-classes/contact.html): Address, teacher phone numbers, WhatsApp and map.
+
+## Policies
+- [Privacy Policy](https://nstcclass.github.io/nstc-classes/privacy.html)
+- [Terms and Conditions](https://nstcclass.github.io/nstc-classes/terms.html)
+- [Disclaimer](https://nstcclass.github.io/nstc-classes/disclaimer.html)
