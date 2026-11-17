@@ -65,6 +65,54 @@ details summary{cursor:pointer;font-weight:700;font-size:16px}
 .sheet{background:var(--card);width:100%;max-width:640px;border-radius:18px 18px 0 0;padding:16px;max-height:92vh;overflow:auto}
 .sheet textarea{min-height:250px;line-height:1.6}
 .photo-prev{display:flex;align-items:center;gap:12px;margin-top:6px}
+
+/* ---- नया लुक: लॉगिन और डैशबोर्ड ---- */
+:root{--blue:#2563eb}
+body.login-mode header{display:none}
+body.login-mode main{max-width:none;padding:0}
+#loginView{position:relative;overflow:hidden;min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:22px 14px 16px;color:#fff;
+  background:radial-gradient(circle at 15% 12%,#1f56a8 0,transparent 42%),radial-gradient(circle at 88% 85%,#1a3f86 0,transparent 40%),linear-gradient(160deg,#051b3d,#0a3470 55%,#051b3d)}
+.deco{position:absolute;font-size:58px;opacity:.13;pointer-events:none}
+.brand{display:flex;align-items:center;gap:12px;margin-top:4px;position:relative}
+.brand-logo{width:78px;height:78px;border-radius:50%;background:#fff;object-fit:contain;padding:4px;border:3px solid #fff}
+.brand-txt{display:flex;flex-direction:column;line-height:1.05;text-align:left}
+.b1{font-size:clamp(26px,8vw,40px);font-weight:900;letter-spacing:.5px}
+.b2{font-size:clamp(20px,6.4vw,32px);font-weight:900;color:#ffc61a}
+.tagline{font-style:italic;font-weight:700;margin:10px 0 16px;font-size:15px;position:relative}
+.lcard{position:relative;width:100%;max-width:430px;background:#fff;color:#0b2948;border-radius:18px;overflow:hidden;box-shadow:0 14px 40px #0008}
+.lhead{display:flex;align-items:center;gap:12px;background:linear-gradient(90deg,#0b3d91,#1457c8);color:#fff;padding:14px 16px}
+.lhead .shield{font-size:34px}
+.lhead b{display:block;font-size:20px}.lhead small{font-size:14px}
+.lbody{padding:14px 18px 18px;text-align:center}
+.people{font-size:34px;letter-spacing:4px}
+.lbody h3{margin:4px 0 2px;font-size:22px;color:#0b2948}
+.lsub{margin:0 0 12px;color:#27486e;font-size:14px}
+.pwrow{display:flex;align-items:center;border:1.5px solid #cdd9ea;border-radius:12px;background:#fff;padding:0 6px 0 12px}
+.pwrow .lock{font-size:20px}
+.pwrow input{border:0;outline:0;background:transparent;color:#0b2948;flex:1;padding:14px 10px;font-size:16px}
+.pwrow button{border:0;background:transparent;font-size:20px;cursor:pointer;padding:8px}
+.lbtn{width:100%;margin-top:12px;border:0;border-radius:12px;background:linear-gradient(90deg,#0a3d9e,#1666d8);color:#fff;font-size:20px;font-weight:800;padding:14px;cursor:pointer}
+.lbtn:disabled{opacity:.6}
+.lnote{margin:12px 0 0;color:#168a46;font-weight:700;font-size:13px}
+.lfoot{position:relative;margin:auto 0 0;padding-top:18px;font-size:13px;color:#dbe7fb;text-align:center}
+.lfoot b{color:#ffc61a}
+#loginView .err{color:#b42318}
+.welcome{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:12px}
+.welcome b{display:block;font-size:20px}.welcome span{color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:14px}
+.stat{border-radius:16px;padding:14px 8px;text-align:center;background:var(--card);border:1px solid var(--line)}
+.stat i{font-style:normal;font-size:26px;display:block}
+.stat b{display:block;font-size:30px;line-height:1.15;margin:2px 0}
+.stat span{font-size:12.5px;color:var(--muted)}
+.stat.s1 b{color:#2563eb}.stat.s2 b{color:#12804f}.stat.s3 b{color:#d9467a}
+.bar{margin:10px 0}.bar .bl{display:flex;justify-content:space-between;font-size:14px;font-weight:700;margin-bottom:4px}
+.track{height:9px;border-radius:99px;background:var(--line);overflow:hidden}.fill{height:100%;border-radius:99px}
+.fill.p{background:#2563eb}.fill.a{background:#f472b6}.fill.n{background:#f5bd3d}
+.rec{display:flex;align-items:center;gap:12px;padding:10px 0;border-top:1px solid var(--line)}
+.rec:first-child{border-top:0}
+.rec .ph{width:42px;height:42px;font-size:17px}
+.rec b{display:block;font-size:15px}.rec span{font-size:12.5px;color:var(--muted)}
+.rec .when{margin-left:auto;font-size:12.5px;color:var(--muted);text-align:right}
 </style>
 </head>
 <body>
@@ -74,17 +122,39 @@ details summary{cursor:pointer;font-weight:700;font-size:16px}
 </header>
 <main>
 
-<section id="loginView" class="card">
-  <h2>शिक्षक लॉगिन</h2>
-  <label for="pw">पासवर्ड</label>
-  <input id="pw" type="password" autocomplete="current-password" placeholder="पासवर्ड लिखिए">
-  <p class="err" id="loginErr"></p>
-  <button id="loginBtn" class="btn green" type="button">अंदर जाएँ</button>
-  <p class="note">यह पन्ना केवल सर लोगों के लिए है। पासवर्ड किसी को न बताएँ।</p>
+<section id="loginView">
+  <span class="deco" style="top:6%;left:4%">⚛️</span><span class="deco" style="top:34%;left:2%">🧪</span><span class="deco" style="bottom:12%;left:5%">📖</span>
+  <span class="deco" style="top:5%;right:4%">🧮</span><span class="deco" style="top:38%;right:3%">🔬</span><span class="deco" style="bottom:14%;right:5%">🧬</span>
+  <div class="brand">
+    <img src="images/logo.png" alt="NSTC logo" class="brand-logo">
+    <div class="brand-txt"><span class="b1">NO.1 SCIENCE</span><span class="b2">TEACHING CENTRE</span></div>
+  </div>
+  <p class="tagline">Quality Education • Bright Future</p>
+  <div class="lcard">
+    <div class="lhead"><span class="shield">🛡️</span><div><b>Private Admin Login</b><small>(Teachers Only)</small></div></div>
+    <div class="lbody">
+      <div class="people">👨‍💼 👨‍💼 👩‍💼 👨‍💼</div>
+      <h3>Welcome Sir,</h3>
+      <p class="lsub">Please enter the admin password to continue...</p>
+      <div class="pwrow"><span class="lock">🔒</span><input id="pw" type="password" autocomplete="current-password" placeholder="Enter Admin Password"><button type="button" id="eye" aria-label="पासवर्ड दिखाएँ / छुपाएँ">👁️</button></div>
+      <p class="err" id="loginErr"></p>
+      <button id="loginBtn" class="lbtn" type="button">➜ Login</button>
+      <p class="lnote">✅ Only Authorized Teachers Can Access This Panel</p>
+    </div>
+  </div>
+  <p class="lfoot">© 2026 <b>NO.1 SCIENCE TEACHING CENTRE</b> &nbsp;|&nbsp; Admin Panel</p>
 </section>
 
 <section id="homeView" class="hide">
+  <div class="welcome"><div><b>Welcome Sir 👋</b><span id="todayTxt"></span></div><button class="btn ghost sm" id="refreshHome" type="button">⟳ ताज़ा करें</button></div>
+  <div class="stats">
+    <div class="stat s1"><i>🎓</i><b id="sTotal">–</b><span>कुल विद्यार्थी</span></div>
+    <div class="stat s2"><i>✅</i><b id="sPresent">–</b><span>आज उपस्थित</span></div>
+    <div class="stat s3"><i>❌</i><b id="sAbsent">–</b><span>आज अनुपस्थित</span></div>
+  </div>
+  <div class="card"><h2>आज की उपस्थिति</h2><div id="bars"><p class="note">खुल रहा है…</p></div></div>
   <div class="card"><h2>कक्षा चुनिए</h2><div class="tiles" id="tiles"></div></div>
+  <div class="card"><h2>हाल के एडमिशन</h2><div id="recent"><p class="note">खुल रहा है…</p></div></div>
 </section>
 
 <section id="classView" class="hide">
@@ -207,6 +277,7 @@ details summary{cursor:pointer;font-weight:700;font-size:16px}
   function views(v) {
     ['loginView', 'homeView', 'classView'].forEach(function (id) { $(id).classList.toggle('hide', id !== v); });
     $('logoutBtn').classList.toggle('hide', v === 'loginView');
+    document.body.classList.toggle('login-mode', v === 'loginView');
   }
   function logout(expired) {
     sessionStorage.removeItem('nstc_admin_token'); S.students = []; S.att = {}; S.marks = {}; views('loginView');
@@ -226,13 +297,39 @@ details summary{cursor:pointer;font-weight:700;font-size:16px}
       .catch(function () { $('loginBtn').disabled = false; $('loginErr').textContent = 'सर्वर से जुड़ नहीं पाए। इंटरनेट देखिए।'; });
   }
 
-  // ---- होम: कक्षा के टाइल ----
+  // ---- होम: डैशबोर्ड ----
+  function tileHtml(n, cnt) { return '<div class="tile" data-cls="class-' + n + '"><div class="ic">📖</div><b>Class ' + n + 'th</b><span>' + (cnt == null ? 'Students' : cnt + ' विद्यार्थी') + '</span></div>'; }
+  function barHtml(label, n, total, cls) {
+    var pct = total ? Math.round(n * 100 / total) : 0;
+    return '<div class="bar"><div class="bl"><span>' + label + ' (' + n + ')</span><span>' + pct + '%</span></div><div class="track"><div class="fill ' + cls + '" style="width:' + pct + '%"></div></div></div>';
+  }
   function home() {
     views('homeView');
-    $('tiles').innerHTML = CLASSES.map(function (n) { return '<div class="tile" data-cls="class-' + n + '"><div class="ic">📖</div><b>Class ' + n + 'th</b><span>Students</span></div>'; }).join('');
-    api({ action: 'counts' }).then(function (j) {
-      $('tiles').innerHTML = CLASSES.map(function (n) { return '<div class="tile" data-cls="class-' + n + '"><div class="ic">📖</div><b>Class ' + n + 'th</b><span>' + (j.counts['class-' + n] || 0) + ' विद्यार्थी</span></div>'; }).join('');
-    }).catch(function () {});
+    var d = todayStr(), mo = monthOf(d);
+    $('todayTxt').textContent = dateHindi(d);
+    $('tiles').innerHTML = CLASSES.map(function (n) { return tileHtml(n, null); }).join('');
+    Promise.all(CLASSES.map(function (n) { return Promise.all([api({ action: 'list', cls: 'class-' + n }), api({ action: 'attendance', cls: 'class-' + n, month: mo })]); }))
+      .then(function (res) {
+        var total = 0, pr = 0, ab = 0, recent = [], tiles = '';
+        res.forEach(function (r, i) {
+          var list = r[0].students, att = r[1].attendance;
+          tiles += tileHtml(CLASSES[i], list.length);
+          total += list.length;
+          list.forEach(function (s) {
+            var v = (att[s.id] || {})[d]; if (v === 'P') pr++; else if (v === 'A') ab++;
+            recent.push({ s: s, n: CLASSES[i] });
+          });
+        });
+        $('tiles').innerHTML = tiles;
+        $('sTotal').textContent = total; $('sPresent').textContent = pr; $('sAbsent').textContent = ab;
+        $('bars').innerHTML = total ? barHtml('Present', pr, total, 'p') + barHtml('Absent', ab, total, 'a') + barHtml('अभी दर्ज नहीं', total - pr - ab, total, 'n') : '<p class="note">अभी कोई विद्यार्थी नहीं जुड़ा है। कोई कक्षा खोलकर विद्यार्थी जोड़िए।</p>';
+        recent.sort(function (x, y) { return (y.s.admissionDate || '').localeCompare(x.s.admissionDate || ''); });
+        $('recent').innerHTML = recent.slice(0, 5).map(function (x) {
+          var photo = x.s.photo ? '<img class="ph" alt="" src="' + esc(x.s.photo) + '">' : '<div class="ph">' + esc(x.s.name.charAt(0)) + '</div>';
+          return '<div class="rec">' + photo + '<div><b>' + esc(x.s.name) + '</b><span>कक्षा ' + x.n + ' · रोल ' + esc(x.s.rollNo || '-') + '</span></div><div class="when">' + (x.s.admissionDate ? esc(dateHindi(x.s.admissionDate)) : '') + '</div></div>';
+        }).join('') || '<p class="note">अभी कोई एडमिशन नहीं।</p>';
+      })
+      .catch(function (e) { if (e.message !== 'relogin') { $('bars').innerHTML = '<p class="err">' + esc(e.message) + '</p>'; } });
   }
 
   // ---- कक्षा का पन्ना ----
@@ -332,6 +429,8 @@ details summary{cursor:pointer;font-weight:700;font-size:16px}
 
   // ---- घटनाएँ ----
   $('loginBtn').addEventListener('click', login);
+  $('eye').addEventListener('click', function () { var i = $('pw'); i.type = i.type === 'password' ? 'text' : 'password'; });
+  $('refreshHome').addEventListener('click', home);
   $('pw').addEventListener('keydown', function (e) { if (e.key === 'Enter') login(); });
   $('logoutBtn').addEventListener('click', function () { logout(false); });
   $('tiles').addEventListener('click', function (e) { var t = e.target.closest ? e.target.closest('.tile') : null; if (t) openClass(t.getAttribute('data-cls')); });
