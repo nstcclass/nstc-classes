@@ -1,0 +1,263 @@
+[
+ {
+  "id": "class6-maths-1",
+  "title_hi": "कक्षा 6 गणित: मिश्रित अभ्यास",
+  "title_en": "Class 6 Maths: Mixed Practice",
+  "class": "6",
+  "subject_hi": "गणित",
+  "subject_en": "Maths",
+  "count": 10
+ },
+ {
+  "id": "class6-science-1",
+  "title_hi": "कक्षा 6 विज्ञान: मिश्रित अभ्यास",
+  "title_en": "Class 6 Science: Mixed Practice",
+  "class": "6",
+  "subject_hi": "विज्ञान",
+  "subject_en": "Science",
+  "count": 10
+ },
+ {
+  "id": "class6-sst-1",
+  "title_hi": "कक्षा 6 सामाजिक विज्ञान: मिश्रित अभ्यास",
+  "title_en": "Class 6 Social Science: Mixed Practice",
+  "class": "6",
+  "subject_hi": "सामाजिक विज्ञान",
+  "subject_en": "Social Science",
+  "count": 10
+ },
+ {
+  "id": "class7-maths-1",
+  "title_hi": "कक्षा 7 गणित: मिश्रित अभ्यास",
+  "title_en": "Class 7 Maths: Mixed Practice",
+  "class": "7",
+  "subject_hi": "गणित",
+  "subject_en": "Maths",
+  "count": 10
+ },
+ {
+  "id": "class7-science-1",
+  "title_hi": "कक्षा 7 विज्ञान: मिश्रित अभ्यास",
+  "title_en": "Class 7 Science: Mixed Practice",
+  "class": "7",
+  "subject_hi": "विज्ञान",
+  "subject_en": "Science",
+  "count": 10
+ },
+ {
+  "id": "class7-sst-1",
+  "title_hi": "कक्षा 7 सामाजिक विज्ञान: मिश्रित अभ्यास",
+  "title_en": "Class 7 Social Science: Mixed Practice",
+  "class": "7",
+  "subject_hi": "सामाजिक विज्ञान",
+  "subject_en": "Social Science",
+  "count": 10
+ },
+ {
+  "id": "class8-maths-1",
+  "title_hi": "कक्षा 8 गणित: मिश्रित अभ्यास",
+  "title_en": "Class 8 Maths: Mixed Practice",
+  "class": "8",
+  "subject_hi": "गणित",
+  "subject_en": "Maths",
+  "count": 10
+ },
+ {
+  "id": "class8-science-1",
+  "title_hi": "कक्षा 8 विज्ञान: मिश्रित अभ्यास",
+  "title_en": "Class 8 Science: Mixed Practice",
+  "class": "8",
+  "subject_hi": "विज्ञान",
+  "subject_en": "Science",
+  "count": 10
+ },
+ {
+  "id": "class8-sst-1",
+  "title_hi": "कक्षा 8 सामाजिक विज्ञान: मिश्रित अभ्यास",
+  "title_en": "Class 8 Social Science: Mixed Practice",
+  "class": "8",
+  "subject_hi": "सामाजिक विज्ञान",
+  "subject_en": "Social Science",
+  "count": 10
+ },
+ {
+  "id": "class9-maths-1",
+  "title_hi": "कक्षा 9 गणित: मिश्रित अभ्यास",
+  "title_en": "Class 9 Maths: Mixed Practice",
+  "class": "9",
+  "subject_hi": "गणित",
+  "subject_en": "Maths",
+  "count": 10
+ },
+ {
+  "id": "class9-science-1",
+  "title_hi": "कक्षा 9 विज्ञान: मिश्रित अभ्यास",
+  "title_en": "Class 9 Science: Mixed Practice",
+  "class": "9",
+  "subject_hi": "विज्ञान",
+  "subject_en": "Science",
+  "count": 10
+ },
+ {
+  "id": "class9-sst-1",
+  "title_hi": "कक्षा 9 सामाजिक विज्ञान: मिश्रित अभ्यास",
+  "title_en": "Class 9 Social Science: Mixed Practice",
+  "class": "9",
+  "subject_hi": "सामाजिक विज्ञान",
+  "subject_en": "Social Science",
+  "count": 10
+ },
+ {
+  "id": "class10-maths-1",
+  "title_hi": "कक्षा 10 गणित: मिश्रित अभ्यास",
+  "title_en": "Class 10 Maths: Mixed Practice",
+  "class": "10",
+  "subject_hi": "गणित",
+  "subject_en": "Maths",
+  "count": 10
+ },
+ {
+  "id": "class10-science-1",
+  "title_hi": "कक्षा 10 विज्ञान: मिश्रित अभ्यास",
+  "title_en": "Class 10 Science: Mixed Practice",
+  "class": "10",
+  "subject_hi": "विज्ञान",
+  "subject_en": "Science",
+  "count": 10
+ },
+ {
+  "id": "class10-sst-1",
+  "title_hi": "कक्षा 10 सामाजिक विज्ञान: मिश्रित अभ्यास",
+  "title_en": "Class 10 Social Science: Mixed Practice",
+  "class": "10",
+  "subject_hi": "सामाजिक विज्ञान",
+  "subject_en": "Social Science",
+  "count": 10
+ },
+ {
+  "id": "class11-biology-1",
+  "title_hi": "कक्षा 11 जीव विज्ञान: मिश्रित अभ्यास",
+  "title_en": "Class 11 Biology: Mixed Practice",
+  "class": "11",
+  "subject_hi": "जीव विज्ञान",
+  "subject_en": "Biology",
+  "count": 10
+ },
+ {
+  "id": "class11-biology-cell-1",
+  "title_hi": "कक्षा 11 जीव विज्ञान: कोशिका",
+  "title_en": "Class 11 Biology: Cell",
+  "class": "11",
+  "subject_hi": "जीव विज्ञान",
+  "subject_en": "Biology",
+  "count": 10
+ },
+ {
+  "id": "class11-biology-classification-1",
+  "title_hi": "कक्षा 11 जीव विज्ञान: जीव जगत का वर्गीकरण",
+  "title_en": "Class 11 Biology: Living World & Classification",
+  "class": "11",
+  "subject_hi": "जीव विज्ञान",
+  "subject_en": "Biology",
+  "count": 10
+ },
+ {
+  "id": "class11-biology-human-1",
+  "title_hi": "कक्षा 11 जीव विज्ञान: मानव शरीर",
+  "title_en": "Class 11 Biology: Human Body",
+  "class": "11",
+  "subject_hi": "जीव विज्ञान",
+  "subject_en": "Biology",
+  "count": 10
+ },
+ {
+  "id": "class11-chemistry-1",
+  "title_hi": "कक्षा 11 रसायन विज्ञान: मिश्रित अभ्यास",
+  "title_en": "Class 11 Chemistry: Mixed Practice",
+  "class": "11",
+  "subject_hi": "रसायन विज्ञान",
+  "subject_en": "Chemistry",
+  "count": 10
+ },
+ {
+  "id": "class11-maths-1",
+  "title_hi": "कक्षा 11 गणित: मिश्रित अभ्यास",
+  "title_en": "Class 11 Maths: Mixed Practice",
+  "class": "11",
+  "subject_hi": "गणित",
+  "subject_en": "Maths",
+  "count": 10
+ },
+ {
+  "id": "class11-physics-1",
+  "title_hi": "कक्षा 11 भौतिकी: मिश्रित अभ्यास",
+  "title_en": "Class 11 Physics: Mixed Practice",
+  "class": "11",
+  "subject_hi": "भौतिकी",
+  "subject_en": "Physics",
+  "count": 10
+ },
+ {
+  "id": "class12-biology-1",
+  "title_hi": "कक्षा 12 जीव विज्ञान: मिश्रित अभ्यास",
+  "title_en": "Class 12 Biology: Mixed Practice",
+  "class": "12",
+  "subject_hi": "जीव विज्ञान",
+  "subject_en": "Biology",
+  "count": 10
+ },
+ {
+  "id": "class12-biology-ecology-1",
+  "title_hi": "कक्षा 12 जीव विज्ञान: पारिस्थितिकी",
+  "title_en": "Class 12 Biology: Ecology",
+  "class": "12",
+  "subject_hi": "जीव विज्ञान",
+  "subject_en": "Biology",
+  "count": 10
+ },
+ {
+  "id": "class12-biology-genetics-1",
+  "title_hi": "कक्षा 12 जीव विज्ञान: आनुवंशिकी",
+  "title_en": "Class 12 Biology: Genetics",
+  "class": "12",
+  "subject_hi": "जीव विज्ञान",
+  "subject_en": "Biology",
+  "count": 10
+ },
+ {
+  "id": "class12-biology-reproduction-1",
+  "title_hi": "कक्षा 12 जीव विज्ञान: जनन",
+  "title_en": "Class 12 Biology: Reproduction",
+  "class": "12",
+  "subject_hi": "जीव विज्ञान",
+  "subject_en": "Biology",
+  "count": 10
+ },
+ {
+  "id": "class12-chemistry-1",
+  "title_hi": "कक्षा 12 रसायन विज्ञान: मिश्रित अभ्यास",
+  "title_en": "Class 12 Chemistry: Mixed Practice",
+  "class": "12",
+  "subject_hi": "रसायन विज्ञान",
+  "subject_en": "Chemistry",
+  "count": 10
+ },
+ {
+  "id": "class12-maths-1",
+  "title_hi": "कक्षा 12 गणित: मिश्रित अभ्यास",
+  "title_en": "Class 12 Maths: Mixed Practice",
+  "class": "12",
+  "subject_hi": "गणित",
+  "subject_en": "Maths",
+  "count": 10
+ },
+ {
+  "id": "class12-physics-1",
+  "title_hi": "कक्षा 12 भौतिकी: मिश्रित अभ्यास",
+  "title_en": "Class 12 Physics: Mixed Practice",
+  "class": "12",
+  "subject_hi": "भौतिकी",
+  "subject_en": "Physics",
+  "count": 10
+ }
+]
