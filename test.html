@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b2948">
+<link rel="icon" type="image/png" href="images/logo.png">
+<link rel="apple-touch-icon" href="images/logo.png">
+<script src="theme.js"></script>
+<script src="analytics.js" defer></script>
+<meta name="description" content="NSTC Classes के मुफ़्त ऑनलाइन टेस्ट: कक्षा 6 से 12 के MCQ हल करें और तुरंत अपना स्कोर देखें।">
+<link rel="canonical" href="https://nstcclass.github.io/nstc-classes/test.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="NSTC Classes">
+<meta property="og:title" content="ऑनलाइन टेस्ट | NSTC Classes">
+<meta property="og:description" content="मुफ़्त ऑनलाइन MCQ टेस्ट, तुरंत स्कोर और सही उत्तर की व्याख्या।">
+<meta property="og:url" content="https://nstcclass.github.io/nstc-classes/test.html">
+<meta property="og:image" content="https://nstcclass.github.io/nstc-classes/images/og-banner.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="NO.1 Science Teaching Centre (NSTC Classes)">
+<meta property="og:locale" content="hi_IN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://nstcclass.github.io/nstc-classes/images/og-banner.png">
+<title>ऑनलाइन टेस्ट | NSTC Classes</title>
+<style>
+:root{--navy:#0b2948;--green:#12634b;--gold:#f5bd3d;--ink:#17283d;--muted:#63748a;--bg:#f4f7fb}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--bg);line-height:1.7}
+a{color:#1769aa}.container{width:min(820px,calc(100% - 36px));margin:auto}
+header{background:var(--navy);box-shadow:0 4px 20px #061a3030}
+.nav{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:14px}
+.brand{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;min-width:0}
+.brand img{width:46px;height:46px;object-fit:contain;background:#fff;border-radius:10px;padding:3px}
+.brand strong{display:block;font-size:14px;line-height:1.25}.brand small{display:block;color:#f5c64f;font-size:11px;letter-spacing:1px}
+.right{display:flex;align-items:center;gap:12px}.right a.home{color:#fff;font-weight:700;font-size:13px;text-decoration:none}
+.lang{border:1px solid #ffffff70;color:#fff;background:#ffffff12;border-radius:30px;padding:7px 12px;cursor:pointer;font-weight:700}
+main{padding:34px 0 50px}
+article{background:#fff;border:1px solid #e6edf5;border-radius:17px;padding:28px;box-shadow:0 8px 26px #102b500d}
+h1{color:var(--navy);font-size:clamp(26px,5vw,34px);margin:0 0 8px;line-height:1.2}
+h2{color:var(--navy);font-size:19px;margin:26px 0 6px}
+p,li{color:#2d3f55}ul{padding-left:22px}li{margin:4px 0}
+.faq{display:grid;gap:10px;margin-top:8px}.faq details{background:#f8fafd;border:1px solid #e6edf5;border-radius:12px;padding:0 16px}.faq summary{cursor:pointer;font-weight:700;color:var(--navy);padding:14px 0;list-style:none;display:flex;justify-content:space-between;gap:12px}.faq summary::-webkit-details-marker{display:none}.faq summary:after{content:'+';font-size:22px;line-height:1;color:var(--green)}.faq details[open] summary:after{content:'3'}.faq summary:focus-visible{outline:3px solid #67a9d8;outline-offset:2px;border-radius:8px}.faq details p{margin:0 0 14px}
+.back{display:inline-block;margin:0 0 14px;padding:6px 0;font-weight:700;text-decoration:none;font-size:15px}.bottom-nav{margin-top:28px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 12px}.chip{background:#e9f4ef;color:#12634b;border:1px solid #bfe0d2;border-radius:999px;padding:5px 12px;font-size:13px;font-weight:700}.grp{margin:12px 0 0;font-weight:700;color:var(--navy)}
+.sm-bar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:8px 0 14px}.sm-crumb{font-size:14px;color:var(--muted);margin:10px 0 4px;line-height:1.9}.sm-crumb a{font-weight:700}.sm-search{flex:1;min-width:160px;padding:11px 13px;border:1px solid #cfd9e6;border-radius:10px;font-size:15px;font-family:inherit}.sm-list{display:grid;gap:10px}.sm-item{display:flex;align-items:center;justify-content:space-between;gap:12px;background:#f8fafd;border:1px solid #e6edf5;border-radius:12px;padding:14px 16px;text-decoration:none;color:var(--navy);font-weight:700}.sm-item .ic{font-size:22px;margin-right:12px}.sm-act{display:flex;gap:8px;flex-shrink:0}.sm-act a{background:var(--gold);color:#17243a;text-decoration:none;border-radius:8px;padding:7px 11px;font-size:13px}.sm-act a:last-child{background:var(--navy);color:#fff}.sm-note{color:var(--muted)}.sm-note[hidden]{display:none}@media(max-width:480px){.sm-file{flex-direction:column;align-items:flex-start}}
+.upd{color:var(--muted);font-size:13px;margin:0 0 14px}
+.btn{display:inline-block;background:var(--gold);color:#17243a;text-decoration:none;font-weight:800;border-radius:9px;padding:11px 17px;margin:4px 6px 4px 0}
+.btn.alt{background:var(--navy);color:#fff}
+.phones{list-style:none;padding:0}.phones a{font-weight:700;text-decoration:none}
+.map-box{border-radius:14px;overflow:hidden;border:1px solid #e6edf5;margin-top:10px}.map-box iframe{width:100%;height:300px;border:0;display:block}
+footer{background:#071d34;color:#dce8f5;text-align:center;padding:22px 16px;font-size:13px}
+footer nav{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 16px;margin-bottom:10px}
+footer a{color:#fff;text-decoration:none;font-weight:700}footer a:hover{color:var(--gold)}
+@media(max-width:480px){article{padding:20px 16px}.brand span{display:none}}
+
+html[data-theme="dark"]{--bg:#0c1624;color-scheme:dark}
+html[data-theme="dark"] body{color:#e6eef7}
+html[data-theme="dark"] article{background:#14263b;border-color:#243b57}
+html[data-theme="dark"] h1,html[data-theme="dark"] h2,html[data-theme="dark"] .faq summary{color:#dbe9f8}
+html[data-theme="dark"] p,html[data-theme="dark"] li{color:#c9d8e8}
+html[data-theme="dark"] .upd{color:#a3b6ca}
+html[data-theme="dark"] a{color:#7dbbf0}
+html[data-theme="dark"] .btn,html[data-theme="dark"] .btn.alt,html[data-theme="dark"] .lang{color:inherit}
+html[data-theme="dark"] .btn{color:#17243a}
+html[data-theme="dark"] .btn.alt{background:#2c5d8a;color:#fff}
+html[data-theme="dark"] .chip{background:#143a30;color:#8fe0c0;border-color:#2f8f6f}
+html[data-theme="dark"] .sm-item{background:#102033;border-color:#243b57;color:#dbe9f8}
+html[data-theme="dark"] .sm-search{background:#0f2338;color:#e6eef7;border-color:#2b4668}
+html[data-theme="dark"] .sm-act a:last-child{background:#2c5d8a}
+html[data-theme="dark"] .sm-crumb,html[data-theme="dark"] .sm-note{color:#a3b6ca}
+html[data-theme="dark"] .grp{color:#dbe9f8}
+html[data-theme="dark"] .faq details{background:#102033;border-color:#243b57}
+html[data-theme="dark"] .map-box{border-color:#243b57}
+html[data-theme="dark"] footer a{color:#fff}
+.right{flex-wrap:nowrap}
+
+.t-list{display:grid;gap:10px;margin-top:10px}.t-item{display:flex;justify-content:space-between;align-items:center;gap:10px;background:#f8fafd;border:1px solid #e6edf5;border-radius:12px;padding:13px 15px}.t-item b{color:var(--navy)}.t-item small{display:block;color:var(--muted)}
+.t-opt{display:block;width:100%;text-align:left;background:#f8fafd;border:1.5px solid #cfd9e6;border-radius:11px;padding:12px 14px;margin:8px 0;font:inherit;color:inherit;cursor:pointer}
+.t-opt.ok{background:#e1f5ea;border-color:#1c9462}.t-opt.bad{background:#fde8e8;border-color:#d64545}
+.t-exp{background:#fff7dd;border:1px solid #f0d98a;border-radius:10px;padding:10px 13px;margin:10px 0}
+.t-prog{height:8px;background:#e6edf5;border-radius:6px;overflow:hidden;margin:6px 0 14px}.t-prog i{display:block;height:100%;background:var(--green)}
+.t-score{font-size:44px;font-weight:800;color:var(--green);margin:6px 0}
+html[data-theme="dark"] .t-item,html[data-theme="dark"] .t-opt{background:#102033;border-color:#2b4668}
+html[data-theme="dark"] .t-opt.ok{background:#12402e;border-color:#2f8f6f}html[data-theme="dark"] .t-opt.bad{background:#4a1d1d;border-color:#c04a4a}
+html[data-theme="dark"] .t-exp{background:#3a3114;border-color:#7a6a24}html[data-theme="dark"] .t-item b{color:#dbe9f8}
+</style>
+</head>
+<body data-title-en="Online Tests" data-title-hi="ऑनलाइन टेस्ट">
+<header><div class="container nav">
+ <a class="brand" href="index.html"><img src="images/logo.png" alt="NSTC Classes logo"><span><strong>NO.1 SCIENCE TEACHING CENTRE</strong><small>NSTC CLASSES</small></span></a>
+ <div class="right"><a class="home" href="index.html" data-en="Home" data-hi="होम">होम</a><button class="lang" id="themeBtn" type="button" aria-label="Dark mode / डार्क मोड">🌙</button><button class="lang" id="langBtn" type="button">English</button></div>
+</div></header>
+<main><div class="container"><article>
+<a class="back" id="backLink" href="index.html" data-en="&larr; Back" data-hi="&larr; वापस">&larr; वापस</a>
+<h1 data-en="Online Tests" data-hi="ऑनलाइन टेस्ट">ऑनलाइन टेस्ट</h1>
+<p data-en="Free MCQ practice. Choose a class and start a test." data-hi="मुफ़्त MCQ अभ्यास। कक्षा चुनिए और टेस्ट शुरू कीजिए।">मुफ़्त MCQ अभ्यास। कक्षा चुनिए और टेस्ट शुरू कीजिए।</p>
+<div class="chips" id="tChips"></div>
+<div id="tApp"></div>
+</article></div></main>
+<footer><nav><a href="about.html" data-en="About Us" data-hi="हमारे बारे में">हमारे बारे में</a><a href="privacy.html" data-en="Privacy Policy" data-hi="गोपनीयता नीति">गोपनीयता नीति</a><a href="terms.html" data-en="Terms and Conditions" data-hi="नियम और शर्तें">नियम और शर्तें</a><a href="study-material.html" data-en="Study Material" data-hi="अध्ययन सामग्री">अध्ययन सामग्री</a><a href="test.html" data-en="Online Tests" data-hi="ऑनलाइन टेस्ट">ऑनलाइन टेस्ट</a><a href="books.html" data-en="Books" data-hi="किताबें">किताबें</a><a href="faq.html" data-en="FAQ" data-hi="सवाल-जवाब">सवाल-जवाब</a><a href="contact.html" data-en="Contact Us" data-hi="संपर्क करें">संपर्क करें</a><a href="disclaimer.html" data-en="Disclaimer" data-hi="अस्वीकरण">अस्वीकरण</a><a href="sir-panel.html" data-en="Teacher Login" data-hi="शिक्षक लॉगिन">शिक्षक लॉगिन</a></nav>© <span id="year"></span> <strong>NO.1 SCIENCE TEACHING CENTRE (NSTC CLASSES)</strong></footer>
+<script>
+(function(){
+ var lang='hi';try{lang=localStorage.getItem('nstc_lang')||'hi'}catch(e){}
+ var btn=document.getElementById('langBtn');
+ function apply(){document.documentElement.lang=lang;
+  document.querySelectorAll('[data-en]').forEach(function(el){el.textContent=el.dataset[lang]||el.dataset.en});
+  btn.textContent=lang==='en'?'हिंदी':'English';
+  var ti=document.body.dataset['title'+(lang==='en'?'En':'Hi')];if(ti)document.title=ti+' | NSTC Classes';}
+ btn.addEventListener('click',function(){lang=lang==='en'?'hi':'en';try{localStorage.setItem('nstc_lang',lang)}catch(e){};apply()});
+ document.getElementById('year').textContent=new Date().getFullYear();
+ var bk=document.getElementById('backLink');
+ if(bk)bk.addEventListener('click',function(e){if(history.length>1&&document.referrer&&document.referrer.indexOf(location.host)!==-1){e.preventDefault();history.back();}});
+ apply();
+})();
+</script>
+
+<script>
+(function(){
+var L=function(){try{return localStorage.getItem('nstc_lang')||'hi'}catch(e){return'hi'}};
+var S={hi:{start:'टेस्ट शुरू करें',q:'प्रश्न',of:'में से',next:'अगला प्रश्न',fin:'परिणाम देखें',score:'आपका स्कोर',again:'दोबारा करें',all:'सभी टेस्ट',share:'WhatsApp पर भेजें',none:'इस कक्षा का टेस्ट जल्द आएगा।',cls:'कक्षा',qs:'प्रश्न',good:'बहुत बढ़िया!',mid:'अच्छा प्रयास, थोड़ा और अभ्यास करें।',low:'पाठ दोबारा पढ़कर फिर कोशिश करें।',ex:'व्याख्या: ',all2:'सभी'},
+en:{start:'Start test',q:'Question',of:'of',next:'Next question',fin:'See result',score:'Your score',again:'Try again',all:'All tests',share:'Share on WhatsApp',none:'Tests for this class are coming soon.',cls:'Class',qs:'questions',good:'Excellent!',mid:'Good effort, practise a little more.',low:'Revise the chapter and try again.',ex:'Explanation: ',all2:'All'}};
+var idx=[],cur='all',app=document.getElementById('tApp'),chips=document.getElementById('tChips');
+function s(){return S[L()]}
+function T(o,k){return o[k+'_'+L()]||o[k+'_hi']}
+function esc(t){var d=document.createElement('div');d.textContent=t;return d.innerHTML}
+function list(){
+ var x=s(),cl=['all'];idx.forEach(function(t){if(cl.indexOf(t['class'])<0)cl.push(t['class'])});
+ cl.sort(function(a,b){return a==='all'?-1:b==='all'?1:a-b});
+ chips.innerHTML=cl.map(function(c){return '<button class="chip" data-c="'+c+'" style="cursor:pointer;'+(c===cur?'background:#12634b;color:#fff':'')+'">'+(c==='all'?x.all2:x.cls+' '+c)+'</button>'}).join('');
+ var f=idx.filter(function(t){return cur==='all'||t['class']===cur});
+ app.innerHTML=f.length?'<div class="t-list">'+f.map(function(t){return '<div class="t-item"><div><b>'+esc(T(t,'title'))+'</b><small>'+x.cls+' '+t['class']+' · '+esc(T(t,'subject'))+' · '+t.count+' '+x.qs+'</small></div><button class="btn" data-id="'+t.id+'">'+x.start+'</button></div>'}).join('')+'</div>':'<p>'+x.none+'</p>';
+}
+chips.addEventListener('click',function(e){var c=e.target.getAttribute&&e.target.getAttribute('data-c');if(c){cur=c;list()}});
+app.addEventListener('click',function(e){var id=e.target.getAttribute&&e.target.getAttribute('data-id');if(id)run(id)});
+function run(id){
+ fetch('tests/'+id+'.json').then(function(r){return r.json()}).then(function(t){
+  chips.style.display='none';var i=0,sc=0,x=s();
+  function show(){
+   var q=t.questions[i];x=s();
+   app.innerHTML='<p><b>'+x.q+' '+(i+1)+' '+x.of+' '+t.questions.length+'</b></p><div class="t-prog"><i style="width:'+(i/t.questions.length*100)+'%"></i></div><h2 style="margin-top:0">'+esc(q.q)+'</h2><div id="opts">'+q.o.map(function(o,k){return '<button class="t-opt" data-k="'+k+'">'+esc(o)+'</button>'}).join('')+'</div><div id="fb"></div>';
+   var done=false;
+   document.getElementById('opts').addEventListener('click',function(e){
+    var k=e.target.getAttribute&&e.target.getAttribute('data-k');if(k===null||done)return;done=true;k=+k;
+    var bs=this.querySelectorAll('.t-opt');bs[q.a].classList.add('ok');if(k!==q.a)bs[k].classList.add('bad');else sc++;
+    document.getElementById('fb').innerHTML='<div class="t-exp">'+x.ex+esc(q.e)+'</div><button class="btn" id="nx">'+(i+1<t.questions.length?x.next:x.fin)+'</button>';
+    document.getElementById('nx').onclick=function(){i++;i<t.questions.length?show():end()};
+   });
+  }
+  function end(){
+   x=s();var n=t.questions.length,p=sc/n,m=p>=.8?x.good:p>=.5?x.mid:x.low;
+   var msg=encodeURIComponent('NSTC Classes टेस्ट: '+t.title_hi+' - मेरा स्कोर '+sc+'/'+n+' '+location.href);
+   app.innerHTML='<h2>'+esc(T(t,'title'))+'</h2><p>'+x.score+'</p><div class="t-score">'+sc+' / '+n+'</div><p>'+m+'</p><p><button class="btn" id="ag">'+x.again+'</button><button class="btn alt" id="bk">'+x.all+'</button><a class="btn alt" target="_blank" rel="noopener" href="https://wa.me/?text='+msg+'">'+x.share+'</a></p>';
+   document.getElementById('ag').onclick=function(){run(id)};
+   document.getElementById('bk').onclick=function(){chips.style.display='';list()};
+  }
+  show();window.scrollTo(0,0);
+ });
+}
+fetch('tests/index.json').then(function(r){return r.json()}).then(function(d){idx=d;list()});
+document.getElementById('langBtn').addEventListener('click',function(){setTimeout(function(){if(!document.getElementById('opts')&&chips.style.display!=='none')list()},0)});
+})();
+</script>
+</body>
+</html>
